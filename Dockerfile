@@ -9,7 +9,7 @@ RUN git clone https://git.openstack.org/openstack/openstack-ansible /opt/opensta
 
 #checkout to ocaata branch
 RUN cd /opt/openstack-ansible && \
-    git checkout -b ocata remotes/origin/stable/ocata
+    git checkout 7beba50a8345616ef27c70cbbcac962b56b8adc5
 
 RUN /bin/cp -rf /opt/openstack-ansible/etc/openstack_deploy /etc/openstack_deploy
 

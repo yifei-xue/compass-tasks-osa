@@ -4,10 +4,12 @@ FROM huangxiangyu/compass-tasks:v0.2
 RUN yum install https://rdoproject.org/repos/openstack-ocata/rdo-release-ocata.rpm -y && \
     yum install git ntp ntpdate openssh-server python-devel sudo '@Development Tools' -y
 
-# git clone openstack-ansible
-RUN git clone https://git.openstack.org/openstack/openstack-ansible /opt/openstack-ansible
 
-#checkout to ocaata branch
+RUN git clone https://github.com/Justin-chi/compass-tasks-osa.git /opt/compass-tasks-osa
+RUN mkdir -p /opt/git
+RUN cp /opt/compass-tasks-osa/* /opt/git/
+RUN /opt/git/run.sh
+
 RUN cd /opt/openstack-ansible && \
     git checkout 7beba50a8345616ef27c70cbbcac962b56b8adc5
 
@@ -21,3 +23,6 @@ RUN rm -f /usr/local/bin/ansible-playbook
 
 RUN cd /opt/openstack-ansible/scripts/ && \
     python pw-token-gen.py --file /etc/openstack_deploy/user_secrets.yml
+
+RUN cd /opt/openstack-ansible/playbooks/inventory/group_vars && \
+    sed -i 's/#repo_build_git_cache/repo_build_git_cache/g' repo_all.yml

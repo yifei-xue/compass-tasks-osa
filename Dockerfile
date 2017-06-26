@@ -11,7 +11,7 @@ RUN cp /opt/compass-tasks-osa/* /opt/git/
 RUN /opt/git/run.sh
 
 RUN cd /opt/openstack-ansible && \
-    git checkout 7beba50a8345616ef27c70cbbcac962b56b8adc5
+    git checkout 255c626e9a44a6b5f22e2dc95026be1dc88954b3
 
 RUN /bin/cp -rf /opt/openstack-ansible/etc/openstack_deploy /etc/openstack_deploy
 

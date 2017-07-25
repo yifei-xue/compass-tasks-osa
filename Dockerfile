@@ -1,4 +1,4 @@
-FROM huangxiangyu/compass-tasks:v0.2
+FROM huangxiangyu/compass-tasks:v0.3
 #FROM localbuild/compass-tasks
 
 RUN yum install https://rdoproject.org/repos/openstack-ocata/rdo-release-ocata.rpm -y && \

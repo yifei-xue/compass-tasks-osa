@@ -20,6 +20,8 @@ cd /opt/openstack-ansible
 
 git checkout b962eed003580ee4c3bd69da911f20b3905a9176
 
+git checkout -b stable/pike
+
 #/bin/cp -rf /opt/tacker_conf/ansible-role-requirements.yml /opt/openstack-ansible/
 #/bin/cp -rf /opt/tacker_conf/openstack_services.yml /opt/openstack-ansible/playbooks/defaults/repo_packages/
 #/bin/cp -rf /opt/tacker_conf/os-tacker-install.yml /opt/openstack-ansible/playbooks/
@@ -40,5 +42,5 @@ rm -f /usr/local/bin/ansible-playbook
 cd /opt/openstack-ansible/scripts/
 python pw-token-gen.py --file /etc/openstack_deploy/user_secrets.yml
 
-cd /opt/openstack-ansible/playbooks/inventory/group_vars
+#cd /opt/openstack-ansible/playbooks/inventory/group_vars
 #sed -i 's/#repo_build_git_cache/repo_build_git_cache/g' repo_all.yml

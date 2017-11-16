@@ -1,6 +1,6 @@
 #!/bin/bash
 
-yum install https://rdoproject.org/repos/openstack-ocata/rdo-release-ocata.rpm -y
+yum install https://rdoproject.org/repos/openstack-pike/rdo-release-pike.rpm -y
 yum install git ntp wget ntpdate openssh-server python-devel sudo '@Development Tools' -y
 
 mkdir -p /opt/git/
@@ -9,7 +9,7 @@ wget artifacts.opnfv.org/compass4nfv/package/openstack.tar.gz
 tar -zxvf openstack.tar.gz
 rm -rf openstack.tar.gz
 #cd openstack
-#git clone https://github.com/openstack/tacker.git -b stable/ocata
+#git clone https://github.com/openstack/tacker.git -b stable/pike
 #cd tacker
 #git checkout a0f1e680d81c7db66ae7a2a08c3d069901d0765a
 

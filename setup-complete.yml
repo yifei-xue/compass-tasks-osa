@@ -3,5 +3,5 @@
 - hosts: localhost
   user: root
   tasks:
-    - name: Mark setup-infrastructure completed
-      shell: echo "Setup infrastructure completed!"
+    - name: Mark setup completed
+      shell: echo "Setup completed!"

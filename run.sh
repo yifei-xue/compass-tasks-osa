@@ -22,7 +22,8 @@ git clone https://git.openstack.org/openstack/openstack-ansible /opt/openstack-a
 cd /opt/openstack-ansible
 
 #git checkout b962eed003580ee4c3bd69da911f20b3905a9176
-git checkout da37351ca0a96ed38de72f3e00a7549a024cb810
+#git checkout da37351ca0a96ed38de72f3e00a7549a024cb810
+git checkout 71110d6bc0f459b668948aca185139c1d79f0452
 
 git checkout -b stable/pike
 
